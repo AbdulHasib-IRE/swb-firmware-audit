@@ -1,0 +1,8 @@
+variable,type,writer,readers,mechanism,consequence
+g_temp,float,"taskReadSensors (core 1, prio 2), line 56","taskUpdateDisplay, taskFirebase (core 1, prio 1)",aligned 32-bit store; readers cannot preempt the writer,stale value only
+g_ntu,int,"taskReadSensors (core 1, prio 2), lines 64-65","taskUpdateDisplay, taskFirebase (core 1, prio 1)","two writes (map, then constrain) without blocking in between",unconstrained transient not observable by lower-priority readers on the same core
+g_waterStatus,String (heap),"taskReadSensors (core 1, prio 2), lines 69-71","taskUpdateDisplay line 124, taskFirebase line 85",reassignment may reallocate the buffer while a preempted reader is copying it,possible corrupted or invalid read
+g_volume,int,"taskUltrasonic (core 0, prio 2), lines 137 and 143","taskUpdateDisplay, taskFirebase (core 1)",two writes on another core; readers run in parallel,transient value above 800 ml observable (up to 1133 ml)
+g_dist,float,"taskUltrasonic, line 136",none,single task,none
+a,bool,"taskFirebase (core 1, prio 1), line 93",taskReadSensors line 69,single byte,status lags the command by up to one sensing period
+Bottle/* record,4 database fields,"taskFirebase, lines 82-85 (four separate requests)",dashboard,"no snapshot, no timestamp, return values ignored",fields may come from different acquisitions; failed writes leave older values unmarked

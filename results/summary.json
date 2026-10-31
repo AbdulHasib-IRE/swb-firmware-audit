@@ -1,0 +1,203 @@
+{
+  "volume_levels_ml": [
+    0,
+    66,
+    133,
+    200,
+    266,
+    333,
+    400,
+    466,
+    533,
+    600,
+    666,
+    733,
+    800
+  ],
+  "volume_n_levels": 13,
+  "volume_diff_min_ml": -0.6667,
+  "volume_diff_max_ml": 66.6,
+  "volume_diff_max_at_cm": 14.999,
+  "volume_step_ml": 66.6667,
+  "volume_one_us_step_ml": 1.1696,
+  "volume_transient_max_ml": 1133,
+  "volume_no_echo_keeps_previous": true,
+  "volume_diff_max_echo_grid_ml": 65.497,
+  "volume_diff_max_echo_us": 341,
+  "volume_diff_min_echo_grid_ml": -0.667,
+  "volume_diff_mean_ml": 32.96,
+  "volume_diff_mean_echo_grid_ml": 32.37,
+  "c57_m_s": 350.88,
+  "zero_bias_temperature_C": 33.2,
+  "thermal_0C": {
+    "chain_min": -63.2,
+    "chain_max": 44.33,
+    "chain_mean": -9.75,
+    "bias_5": -19.7,
+    "bias_11": -43.33,
+    "bias_17": -66.97,
+    "chain_5": 0.0,
+    "chain_11": 0.0,
+    "chain_17": 0.0
+  },
+  "thermal_20C": {
+    "chain_min": -24.73,
+    "chain_max": 57.87,
+    "chain_mean": 16.26,
+    "bias_5": -7.44,
+    "bias_11": -16.37,
+    "bias_17": -25.3,
+    "chain_5": 0.0,
+    "chain_11": 0.0,
+    "chain_17": 0.0
+  },
+  "thermal_33C": {
+    "chain_min": -1.07,
+    "chain_max": 66.47,
+    "chain_mean": 32.7,
+    "bias_5": -0.13,
+    "bias_11": -0.28,
+    "bias_17": -0.44,
+    "chain_5": 0.0,
+    "chain_11": 0.0,
+    "chain_17": 0.0
+  },
+  "thermal_40C": {
+    "chain_min": 0.0,
+    "chain_max": 78.0,
+    "chain_mean": 40.37,
+    "bias_5": 3.62,
+    "bias_11": 7.96,
+    "bias_17": 12.31,
+    "chain_5": 0.0,
+    "chain_11": 66.0,
+    "chain_17": 66.0
+  },
+  "thermal_0_40C_bounds": [
+    -63.2,
+    78.0
+  ],
+  "computed_distance_11cm_20C": 11.246,
+  "linear_volume_11cm_20C": 383.6,
+  "chain_err_ranges": {
+    "0.0": [
+      -63.2,
+      44.33
+    ],
+    "10.0": [
+      -43.8,
+      51.13
+    ],
+    "20.0": [
+      -24.73,
+      57.87
+    ],
+    "25.0": [
+      -15.33,
+      61.2
+    ],
+    "30.0": [
+      -6.27,
+      64.53
+    ],
+    "33.0": [
+      -1.07,
+      66.47
+    ],
+    "35.0": [
+      0.0,
+      69.53
+    ],
+    "40.0": [
+      0.0,
+      78.0
+    ]
+  },
+  "ntu_max_reported": 600,
+  "ntu_at_count0": 600,
+  "ntu_zero_from_count": 3000,
+  "safe_min_count_reminder_off": 2955,
+  "ntu_distinct_values": 601,
+  "ntu_output_increment": 1,
+  "ntu_nominal_slope_per_count": -0.2,
+  "ntu_irregular_runs": [
+    [
+      0,
+      0,
+      600
+    ],
+    [
+      1496,
+      1504,
+      300
+    ]
+  ],
+  "ntu_counts_per_output_unit": {
+    "1": 1,
+    "5": 598,
+    "9": 1
+  },
+  "ntu_map_min_before_constrain": -219,
+  "decision_table": [
+    [
+      0,
+      0,
+      2954,
+      600,
+      10,
+      "UNSAFE"
+    ],
+    [
+      0,
+      2955,
+      4095,
+      9,
+      0,
+      "SAFE"
+    ],
+    [
+      1,
+      0,
+      4095,
+      600,
+      0,
+      "Drink Time"
+    ]
+  ],
+  "timing": {
+    "t_conv_max_ms": 750,
+    "adc_delays": 10,
+    "adc_delay_ms": 10,
+    "sensor_task_delay_ms": 500,
+    "firebase_delay_ms": 5000,
+    "firebase_requests_per_cycle": 6,
+    "fb_socket_connection_timeout_ms_default": 10000,
+    "fb_server_response_timeout_ms_default": 10000,
+    "sensor_budget_ms": 1350,
+    "sensor_budget_ratio_to_500": 2.7,
+    "per_request_timeout_ms": 20000,
+    "degraded_cycle_command_delay_ms": 125000
+  },
+  "energy": {
+    "assumptions": {
+      "rail_V": 5.0,
+      "cell_V": 3.7,
+      "boost_efficiency": 0.85,
+      "esp_low_mA": 68,
+      "esp_high_mA": 124.7,
+      "excluded": "buzzer and LED (event-driven; LED current undefined without a series resistor)"
+    },
+    "low": {
+      "I_5V_mA": 154.5,
+      "P_5V_W": 0.772,
+      "I_cell_mA": 245.6,
+      "hours_per_1000mAh": 4.07
+    },
+    "high": {
+      "I_5V_mA": 211.2,
+      "P_5V_W": 1.056,
+      "I_cell_mA": 335.8,
+      "hours_per_1000mAh": 2.98
+    }
+  }
+}

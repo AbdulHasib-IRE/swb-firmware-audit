@@ -1,0 +1,13 @@
+quantity,value
+t_conv_max_ms,750
+adc_delays,10
+adc_delay_ms,10
+sensor_task_delay_ms,500
+firebase_delay_ms,5000
+firebase_requests_per_cycle,6
+fb_socket_connection_timeout_ms_default,10000
+fb_server_response_timeout_ms_default,10000
+sensor_budget_ms,1350
+sensor_budget_ratio_to_500,2.7
+per_request_timeout_ms,20000
+degraded_cycle_command_delay_ms,125000

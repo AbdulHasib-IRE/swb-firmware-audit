@@ -1,0 +1,9 @@
+load,current_mA,source,scenario
+"ESP32 module, modem-sleep at 240 MHz (upper value)",68,"Espressif ESP32 datasheet v5.3, Table 4-2",low
+"ESP32 module, Wi-Fi RX continuous",112,"ESP32-WROOM-32E datasheet v2.1, Table 16",high
+"ESP32 module, Wi-Fi TX 802.11b 19.5 dBm (average)",239,"ESP32-WROOM-32E datasheet v2.1, Table 16","high, 10% duty assumed"
+HC-SR04 working current,15,HC-SR04 module datasheet,both
+"Turbidity module (SEN0189-type) operating current, max",40,DFRobot SEN0189 documentation,both
+"DS18B20 active current, max",1.5,DS18B20 datasheet,both
+OLED module,20,assumed (not datasheet-derived),both
+"Development-board overhead (power LED, USB-UART idle)",10,assumed (not datasheet-derived),both

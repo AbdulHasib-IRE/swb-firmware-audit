@@ -1,0 +1,4 @@
+reminder_flag_a,count_from,count_to,ntu_at_from,ntu_at_to,status
+0,0,2954,600,10,UNSAFE
+0,2955,4095,9,0,SAFE
+1,0,4095,600,0,Drink Time
